@@ -1,0 +1,18 @@
+{
+    "extends": "./node_modules/gts/tsconfig-google.json",
+    "compilerOptions": {
+        "incremental": true,
+        "tsBuildInfoFile": "./dist/.tsbuildinfo",
+        "sourceMap": true,
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "target": "ES6",
+        "esModuleInterop": true,
+        "typeRoots": ["node_modules/@types"],
+        "moduleResolution": "node"
+    },
+    "include": [
+        "src/**/*.ts",
+        "test/**/*.ts"
+    ]
+}
