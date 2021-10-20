@@ -8,8 +8,7 @@
     "deploy:http": "npm run build && gcloud functions deploy Function-Name --project=project-name --region=europe-west2 --trigger-http --entry-point=exampleHttpFunction --memory=256MB --runtime=nodejs16 --timeout=60s --source=./build/src",
     "deploy:pubsub": "npm run build && gcloud functions deploy Function-Name --project=project-name --region=europe-west2 --trigger-topic=pubsubTopicName --entry-point=exampleEventFunction --memory=256MB --runtime=nodejs16 --timeout=60s  --source=./build/src",
     "build": "tsc",
-    "postbuild": "copyfiles package.json package-lock.json .gcloudignore ./dist",
-    "lint": "eslint --fix"
+    "postbuild": "copyfiles package.json package-lock.json .gcloudignore ./dist"
   },
   "repository": {
     "type": "git",
